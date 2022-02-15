@@ -11,10 +11,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
     <title>WB</title>
+    <meta http-equiv="refresh" content="120">
 </head>
 
-<body onload=display_ct();>
-    <span id='ct'></span>
+<body <div class="area" onload=display_ct();>
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    </div>
+
 
     <div class="card">
         <div class="search">
@@ -27,6 +41,7 @@
                 </svg></button>
         </div>
         <div class="weather loading">
+            <span id='ct'></span>
             <h2 class="city"> la méteo au Lamentin </h2>
             <h1 class="temp">51°C</h1>
             <div class="flex">
@@ -35,7 +50,9 @@
             </div>
             <div class="humidity">Humidity: 60%</div>
             <div class="wind">Wind Speed: 6.2 km/h</div>
+            <div class="pressure">Pressure: 1015 atm</div>
         </div>
+    </div>
     </div>
 
 
