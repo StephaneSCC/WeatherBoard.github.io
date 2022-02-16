@@ -1,29 +1,39 @@
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   margin: 0;
   font-family: "Open Sans", sans-serif;
   background: #222;
   background-image: url("https//source.unsplash.com/1600x900/?landscape");
-  font-size: 105%;
+  font-size: 190%;
 }
 
 .card {
   background: #eaeaeaa4;
-  padding: 2em;
+  padding: 0.9em;
   border-radius: 30px;
   width: 100%;
-  min-width: 420px;
-  height: 600px;
+  min-width: 360px;
+  height: 800px;
   margin: 1em;
+  font-weight: bold;
 }
 
 .search {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.image {
+  width: 25%;
+  float: right;
+  position: relative;
+  top: -568px;
+  width: 20%;
+  height: auto;
+  min-width: 22%;
+  z-index: 1;
 }
 
 button {
@@ -57,7 +67,6 @@ button:hover {
 
 h1.temp {
   margin: 0;
-  margin-bottom: 0.4em;
 }
 
 .flex {
@@ -88,7 +97,8 @@ h1.temp {
   background: #a7b1ff;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
   width: 100%;
-  height: 100vh;
+  min-width: 450px;
+  height: 98vh;
 }
 
 .circles {
@@ -96,7 +106,7 @@ h1.temp {
   top: 0;
   left: 0;
   width: 97%;
-  height: 98%;
+  height: 96%;
   overflow: hidden;
   z-index: -1;
 }
