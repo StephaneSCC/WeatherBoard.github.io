@@ -81,3 +81,12 @@ let weather2 = {
 }
 
 weather2.fetchweather("Le Lamentin");
+
+function changeImage() {
+    var image = document.getElementById("myImage");
+    if (image.src.match("card back")) {
+        image.src = "images/.png";
+    } else {
+        image.src = "images/.jpg";
+    }
+}
