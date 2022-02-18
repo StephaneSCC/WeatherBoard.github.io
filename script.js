@@ -46,7 +46,7 @@ let weather = {
         document.querySelector(".temp").innerText = temp + "°C";
         document.querySelector(".humidity").innerText = "Humidité: " + humidity + "%";
         document.querySelector(".wind").innerText = "Vitesse du vent: " + speed + " km/h";
-        document.querySelector(".pressure").innerText = "Pression atmo: " + pressure + " hpa";
+        document.querySelector(".pressure").innerText = "Pression atmo: " + pressure + " hPa";
         document.querySelector(".weather").classList.remove("loading");
     },
     search: function () {
@@ -54,15 +54,15 @@ let weather = {
     }
 };
 
-document.querySelector(".search button").addEventListener("click", function () {
-    weather.search();
-});
+// document.querySelector(".search button").addEventListener("click", function () {
+//     weather.search();
+// });
 
-document.querySelector(".search-bar").addEventListener("keyup", function (event) {
-    if (event.key == "Enter") {
-        weather.search();
-    }
-});
+// document.querySelector(".search-bar").addEventListener("keyup", function (event) {
+//     if (event.key == "Enter") {
+//         weather.search();
+//     }
+// });
 
 weather.fetchweather("Le Lamentin");
 
@@ -76,17 +76,10 @@ let weather2 = {
         const { name } = data;
         const { lib_qual, coul_qual } = data.features[0].attributes;
         console.log(data.features[0].attributes);
-        document.querySelector(".lib_qual").innerText = "Qualité d'air: " + lib_qual + " " + coul_qual;
+        document.querySelector(".lib_qual").innerText = "Qualité d'air: " + lib_qual;
+        document.querySelector(".qualCol").style.backgroundColor = coul_qual;
     },
 }
 
 weather2.fetchweather("Le Lamentin");
 
-function changeImage() {
-    var image = document.getElementById("myImage");
-    if (image.src.match("card back")) {
-        image.src = "images/.png";
-    } else {
-        image.src = "images/.jpg";
-    }
-}

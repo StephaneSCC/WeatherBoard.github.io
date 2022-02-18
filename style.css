@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   height: 100vh;
@@ -12,11 +16,24 @@ body {
   background: #eaeaeaa4;
   padding: 0.9em;
   border-radius: 30px;
-  width: 100%;
+  width: 90vw;
   min-width: 360px;
-  height: 800px;
-  margin: 1em;
+  height: 90vh;
+  margin: 5vh 5vw;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.city {
+  font-size: 50px;
+}
+
+.infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .search {
@@ -26,14 +43,12 @@ body {
 }
 
 .image {
-  width: 45%;
-  float: right;
-  position: relative;
-  top: -450px;
-  width: 20%;
-  height: auto;
-  min-width: 150px;
-  z-index: 1;
+  align-self: flex-end;
+}
+
+.qualCol {
+  width: 580px;
+  height: 50px;
 }
 
 button {
@@ -77,6 +92,15 @@ h1.temp {
 .description {
   text-transform: capitalize;
   margin-left: 8px;
+}
+
+.weather {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
 }
 
 .weather.loading {
