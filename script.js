@@ -39,15 +39,31 @@ let weather = {
         const { icon, description } = data.weather[0];
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
-        const { pressure } = data.main;
+        const { feels_like } = data.main;
         document.querySelector(".city").innerText = "La méteo: " + name;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
         document.querySelector(".description").innerText = description;
         document.querySelector(".temp").innerText = temp + "°C";
         document.querySelector(".humidity").innerText = "Humidité: " + humidity + "%";
         document.querySelector(".wind").innerText = "Vitesse du vent: " + speed + " km/h";
-        document.querySelector(".pressure").innerText = "Pression atmo: " + pressure + " hPa";
+        document.querySelector(".hindex").innerText = "Indice de chaleur: " + feels_like + " °C";
         document.querySelector(".weather").classList.remove("loading");
+        var x = feels_like;
+        if (x >= 54) {
+            document.getElementsByClassName("hindex_col")[0].style.backgroundColor = '#000000';
+        }
+        else if (x >= 41) {
+            document.getElementsByClassName("hindex_col")[0].style.backgroundColor = '#FF0000';
+        }
+        else if (x >= 32) {
+            document.getElementsByClassName("hindex_col")[0].style.backgroundColor = '#FFA500';
+        }
+        else if (x >= 27) {
+            document.getElementsByClassName("hindex_col")[0].style.backgroundColor = '#FFFF00';
+        }
+        else if (x >= 26) {
+            document.getElementsByClassName("hindex_col")[0].style.backgroundColor = '##90EE90';
+        }
     },
     search: function () {
         this.fetchweather(document.querySelector(".search-bar").value);
@@ -82,4 +98,5 @@ let weather2 = {
 }
 
 weather2.fetchweather("Le Lamentin");
+
 
